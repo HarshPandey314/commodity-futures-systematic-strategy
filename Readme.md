@@ -16,6 +16,8 @@ The strategy operates in three layers:
 
 Identifies the long term market direction using two indicators on the daily chart. If price is trading above EMA 20, 50 and 100 simultaneously, and OBV is trending upward, the bias is bullish. The reverse defines bearish. No signal is taken against this bias.
 
+![Daily Chart ZL](images/daily_chart_zl.png)
+
 ### Layer 2 — Entry Signal Generation (240min and 60min)
 
 Once daily bias is established, the strategy looks for entry signals on lower timeframes:
@@ -24,6 +26,10 @@ Once daily bias is established, the strategy looks for entry signals on lower ti
 - **60min** — Three conditions must be met simultaneously: MACD crossover, RSI above 50, and volume above 20 bar average
 
 Either timeframe generating a signal in the direction of the daily bias triggers an entry. More conditions are required on the lower timeframe to filter out false signals.
+
+![240min Chart ZL](images/240m_chart_zl.png)
+![60min Chart ZL](images/60m_chart_zl.png)
+![Final Signals Chart ZL](images/final_signals_chart_zl.png)
 
 ### Layer 3 — Trade Execution and Risk Management
 
@@ -43,7 +49,7 @@ The backtester simulates real trading conditions bar by bar on 60min data:
 - ATR calculated dynamically on each bar
 - Equity curve and drawdown tracked continuously, not just on trade close
 
----
+## ![Equity Curve ZL](images/equity_curve_zl.png)
 
 ## Results
 
@@ -62,7 +68,7 @@ Tested on 8 commodity futures over 14 months of data (March 2025 — May 2026):
 
 **6 out of 8 products profitable.** ZL (Soybean Oil) shows exceptional performance with Sharpe ratio of 8.19, profit factor of 3.86 and maximum drawdown of just -2.54 points. The strategy works best in trending commodity markets with clear directional bias.
 
----
+## ![Final Results Table](images/final_result_table.png)
 
 ## Project Structure
 
